@@ -2,6 +2,7 @@ import http, { Server } from 'http';
 import os from 'os';
 import fs from 'fs';
 import path from 'path';
+import {StringUtil } from './Utils/StringUtil';
 
 const port = 4000;
 const host = '127.0.0.1';
@@ -28,11 +29,12 @@ const server : Server = http.createServer((req,res)=>{
     //     // res.end(`${result}`)
     // });
 
-    fs.readFile(path.join(__dirname,'data','employees.json'),'utf-8',(err,result)=>{
-        if(err) throw err;
-        res.end(result);
-    });
-
+    // fs.readFile(path.join(__dirname,'data','employees.json'),'utf-8',(err,result)=>{
+    //     if(err) throw err;
+    //     res.end(result);
+    // });
+    
+    res.end(`${StringUtil.printTriangle('shreyshah')}`);
 
 
     // res.end(`${JSON.stringify(osData)}`);
