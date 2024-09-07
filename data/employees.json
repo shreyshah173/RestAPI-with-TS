@@ -1,0 +1,55 @@
+{
+    "company": {
+        "name": "Tech Innovators",
+        "location": "New York",
+        "employees": [
+            {
+                "id": 1,
+                "name": "John Doe",
+                "age": 28,
+                "department": "Engineering",
+                "role": "Software Engineer",
+                "projects": [
+                    {
+                        "project_id": "P001",
+                        "project_name": "Expense Tracker",
+                        "status": "In Progress"
+                    },
+                    {
+                        "project_id": "P002",
+                        "project_name": "EchoMinds",
+                        "status": "Completed"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Jane Smith",
+                "age": 32,
+                "department": "Marketing",
+                "role": "Digital Marketer",
+                "projects": [
+                    {
+                        "project_id": "P003",
+                        "project_name": "SEO Optimization",
+                        "status": "In Progress"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Emily Johnson",
+                "age": 25,
+                "department": "Sales",
+                "role": "Account Manager",
+                "projects": [
+                    {
+                        "project_id": "P004",
+                        "project_name": "Client Outreach",
+                        "status": "Not Started"
+                    }
+                ]
+            }
+        ]
+    }
+}
