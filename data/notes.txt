@@ -1,0 +1,2 @@
+This is an sample file the content from this file will be shown on the api request by 
+using node js core modules fs.
