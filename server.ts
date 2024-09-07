@@ -2,7 +2,8 @@ import http, { Server } from 'http';
 import os from 'os';
 import fs from 'fs';
 import path from 'path';
-import {StringUtil } from './Utils/StringUtil';
+import {StringUtil} from './Utils/StringUtil';
+import { MathUtil } from './Utils/MathUtil';
 
 const port = 4000;
 const host = '127.0.0.1';
@@ -34,8 +35,9 @@ const server : Server = http.createServer((req,res)=>{
     //     res.end(result);
     // });
     
-    res.end(`${StringUtil.printTriangle('shreyshah')}`);
+    // res.end(`${StringUtil.printTriangle('shreyshah')}`);
 
+    res.end(`${MathUtil.printTable(10)}`);
 
     // res.end(`${JSON.stringify(osData)}`);
     // res.end('<h3>welcome to node js rest api with ts</h3>');
