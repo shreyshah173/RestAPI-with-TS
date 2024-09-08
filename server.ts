@@ -58,7 +58,13 @@ const server: Server = http.createServer((req,res) => {
                 body += chunk;
             }).on('end' , () => {
                 let formatData = JSON.parse(body);
-                res.end(`${JSON.stringify(formatData)}`);
+                // res.end(`${JSON.stringify(formatData)}`);
+                if(formatData.name==='shrey' && formatData.password==='shrey'){
+                    res.end(`successful login`);
+                }
+                else{
+                    res.end(`Please enter correct password`);
+                }
             })
         }
     }
