@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import {StringUtil} from './Utils/StringUtil';
 import { MathUtil } from './Utils/MathUtil';
+import { ApiRoutes } from './apiRoutes/apiRoutes';
 
 const port = 4000;
 const host = '127.0.0.1';
@@ -49,19 +50,8 @@ const server: Server = http.createServer((req,res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type','text/html');
 
-    let url:string | undefined = req.url;
-    let method:string | undefined = req.method;
-    let result : string = '';
-    if(url === '/' && method==='GET'){
-        result = '<h3>Hello World</h3>';
-    }
-    else if(url ==='/home' && method==='GET'){
-        result = '<h3>Welcome to home page</h3>';
-    }
-    else{
-        result = '<h3>This page is not defined</h3>';
-    }
-    res.end(result);
+    ApiRoutes.mapRoutes(req,res);
+
 })
 
 server.listen(port,host, () => {
