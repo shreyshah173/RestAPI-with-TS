@@ -8,6 +8,7 @@ let apiMiddle = (req:express.Request,res:express.Response,next:express.NextFunct
     let result = `[${url}] - [${method}] - [${date}] - [${time}]`;
     console.log(result);
 
+    
     next();
 }
 
